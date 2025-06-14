@@ -11,6 +11,12 @@
   background-color: var(--white);
   padding: 30px 35px 10px;
   border-radius: 14px;
+
+  @media (max-width : 430px) {
+    padding: 21px 15px 10px;
+    
+  }
+
 }
 iframe.newDealsFrame {
   width: 100%;
