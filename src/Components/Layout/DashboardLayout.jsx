@@ -7,6 +7,7 @@ import Logo from "../../Asset/LogoMainColored.svg";
 import LogoMob from "../../Asset/RLogoColored.svg";
 import {
   ContactIcon,
+  DashboardIconFill,
   EmailIcon,
   InternetIcon,
   LogoutIconMobileScreen,
@@ -22,7 +23,7 @@ import {
   MenuIcon,
 } from "../../StoreImages/StoreImage.jsx";
 import ContactUs from "../ContactUs/ContactUs.jsx";
-import { BellOutlined, MoreOutlined, ArrowLeftOutlined } from "@ant-design/icons";
+import { BellOutlined, MoreOutlined, ArrowLeftOutlined, DashboardFilled } from "@ant-design/icons";
 import { isLogged } from "../../Api/makeRequest.js";
 
 const DashboardLayout = ({ children }) => {
@@ -158,7 +159,7 @@ const DashboardLayout = ({ children }) => {
             {/* Default Mobile Layout */}
             <div className="mobile-top-header">
               <div className="broker-box">
-                {pathname === "/dashboard" ? <DashboardIcon /> : ""}
+                  {pathname === "/dashboard" ? <DashboardIconFill /> : ""}
                 <span className="broker-text">
                   {pathname === "/dashboard" ? "Referral" : ""}
                 </span>

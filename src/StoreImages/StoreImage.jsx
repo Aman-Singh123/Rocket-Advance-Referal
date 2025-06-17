@@ -475,3 +475,16 @@ export function InternetIcon() {
     </svg>
   )
 }
+
+export function DashboardIconFill() {
+  return (
+
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="32" rx="6" fill="#D82F4A" />
+      <path d="M11.3333 14.6666H12.6667C14 14.6666 14.6667 13.9999 14.6667 12.6666V11.3333C14.6667 9.99992 14 9.33325 12.6667 9.33325H11.3333C10 9.33325 9.33334 9.99992 9.33334 11.3333V12.6666C9.33334 13.9999 10 14.6666 11.3333 14.6666Z" fill="white" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M19.3333 14.6666H20.6667C22 14.6666 22.6667 13.9999 22.6667 12.6666V11.3333C22.6667 9.99992 22 9.33325 20.6667 9.33325H19.3333C18 9.33325 17.3333 9.99992 17.3333 11.3333V12.6666C17.3333 13.9999 18 14.6666 19.3333 14.6666Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M19.3333 22.6666H20.6667C22 22.6666 22.6667 21.9999 22.6667 20.6666V19.3333C22.6667 17.9999 22 17.3333 20.6667 17.3333H19.3333C18 17.3333 17.3333 17.9999 17.3333 19.3333V20.6666C17.3333 21.9999 18 22.6666 19.3333 22.6666Z" fill="white" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M11.3333 22.6666H12.6667C14 22.6666 14.6667 21.9999 14.6667 20.6666V19.3333C14.6667 17.9999 14 17.3333 12.6667 17.3333H11.3333C10 17.3333 9.33334 17.9999 9.33334 19.3333V20.6666C9.33334 21.9999 10 22.6666 11.3333 22.6666Z" fill="white" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  )
+}

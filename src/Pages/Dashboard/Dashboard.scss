@@ -2,9 +2,19 @@
   display: flex;
   gap: 24px;
 
+
+  // @media (max-width:768px) {
+  //   display: block !important;
+  // }
+
+  @media (max-width:768px) {
+    display: block;
+    
+  }
+
   .dealsContainer {
     width: 100%;
-    flex-wrap: wrap;
+    
 
     @media (max-width:410px) {
       flex-wrap: nowrap !important;
@@ -21,7 +31,7 @@
   }
 
   &_inner {
-    width: 100%;
+    // width: 100%;
     display: flex;
     gap: 30px;
 
@@ -41,5 +51,4 @@
       }
     }
   }
-
 }

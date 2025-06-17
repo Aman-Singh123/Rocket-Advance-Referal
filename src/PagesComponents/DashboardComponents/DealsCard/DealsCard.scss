@@ -129,6 +129,7 @@
   @media (max-width: 768px) {
     // flex-wrap: wrap;
     gap: 12px;
+    justify-content: space-evenly;
   }
 }
 
@@ -311,7 +312,8 @@
 
       // margin-bottom: 12px;
       @media (max-width: 767px) {
-        justify-content: space-between;
+        // justify-content: space-between;
+        gap: 16px;
       }
     }
 
