@@ -152,6 +152,15 @@ const DashboardLayout = ({ children }) => {
 
             </div>
             <div className="mobile-bottom-nav height-mobile-bottom ">
+              <div
+                className=""
+                onClick={() => {
+                  navigate("/dashboard");
+                  setShowContact(false);
+                }}
+              >
+                {pathname === "/dashboard" ? <DashboardIconFill /> : <DashboardIcon />}
+              </div>
             </div>
           </>
         ) : (
