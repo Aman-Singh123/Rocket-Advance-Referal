@@ -1177,10 +1177,16 @@ button span {
     margin: 0;
   }
 
+  p:nth-of-type(2) {
+    font-weight: 400;
+    color: #7f868d;
+    padding-left: 32px;
+  }
+
   .contact-details {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px;
     margin-top: 20px;
     width: 100%;
     max-width: 190px;
@@ -1221,6 +1227,7 @@ button span {
     }
 
     .linkText {
+      color: var(--baseColor);
       font-weight: 500;
     }
 

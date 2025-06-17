@@ -9,6 +9,7 @@ import {
   ContactIcon,
   DashboardIconFill,
   EmailIcon,
+  EmailIconFilled,
   InternetIcon,
   LogoutIconMobileScreen,
   ProfileIcon,
@@ -116,7 +117,7 @@ const DashboardLayout = ({ children }) => {
                 <div className="contact-details">
                   <div className="contact-row">
                     <div className="icon-col">
-                      <EmailIcon />
+                      <EmailIconFilled />
                     </div>
                     <div className="text-col">
                       <p className="linkText">info@rocketadvance.ca</p>
