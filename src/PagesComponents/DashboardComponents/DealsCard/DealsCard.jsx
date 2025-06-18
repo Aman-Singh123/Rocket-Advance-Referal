@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./DealsCard.scss";
 import { ShareIcon } from "../../../StoreImages/StoreImage";
-
+import { Tooltip } from "antd";
+import makeRequest from "../../../Api/makeRequest";
+import { useNavigate } from "react-router-dom";
 export default function DealsCard(
   {
     cardImgLeft,
@@ -12,13 +14,42 @@ export default function DealsCard(
   },
   props
 ) {
+  const [src, setSrc] = useState();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+    const navigate = useNavigate();
+    const fetchLeadDetail = async () => {
+      const { data } = await makeRequest(
+        "/referral/lead-form",
+        "get",
+        undefined,
+        "",
+        navigate
+      );
+      if (!Object.keys(data || []).length) return;
+      setSrc(data?.Lead_Shortened_Cuttly);
+    };
+  
+    useEffect(() => {
+      fetchLeadDetail();
+    }, []);
+
+
+  async function copyTextToClipboard() {
+    if ("clipboard" in navigator) {
+      return await navigator.clipboard.writeText(src);
+    } else {
+      return document.execCommand("copy", true, src);
+    }
+  }
+
 
   const desktopCard = (
     <div className="dealsCard whiteCard" {...props}>
@@ -53,18 +84,20 @@ export default function DealsCard(
       </div>
 
       {/* Partner Link Card */}
-      <div className="smallCards_container">
+      <Tooltip trigger="click" title="Link copied to clipboard">
+      <div className="smallCards_container" onClick={copyTextToClipboard}>
         <div className="smallCards_container_top">
           <div className="smallCards_container_left">
             <ShareIcon />
           </div>
           <div className="smallCards_container_right">
-            <h3 style={{ color: "#e42654", fontWeight: "bold" }}>
+            <h3 style={{ color: "#0E1C2C", fontWeight: "bold" }}>
               Your Partner Link
             </h3>
           </div>
         </div>
-      </div>
+        </div>
+      </Tooltip>
     </div>
   );
 

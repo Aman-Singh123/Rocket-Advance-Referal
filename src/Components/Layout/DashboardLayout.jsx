@@ -145,12 +145,6 @@ const DashboardLayout = ({ children }) => {
                   </div>
                 </div>
               </div>
-
-
-
-
-
-
             </div>
             <div className="mobile-bottom-nav height-mobile-bottom ">
               <div
