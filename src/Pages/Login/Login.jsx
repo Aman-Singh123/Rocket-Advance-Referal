@@ -61,7 +61,7 @@ export default function Login() {
   return (
     <div className="userDetails">
       <h1>Hello Again!</h1>
-      <p>Welcome Back to Referral partner Portal</p>
+      <p>Welcome Back to Referral Partner Portal</p>
       <div className="inputOuter mb30">
         <Input
           placeholder="Email Address"
@@ -97,16 +97,16 @@ export default function Login() {
               Account Type
             </span>
           }
-          value={'referral'}
+          value={'Referral'}
           options={[
             {
               value: 'brokerAdministrator',
-              label: 'Broker administrator',
+              label: 'Broker Administrator',
               disabled: true,
             },
             {
               value: 'brocketOfRecord',
-              label: 'Broker of record',
+              label: 'Broker of Record',
               disabled: true,
             },
             {

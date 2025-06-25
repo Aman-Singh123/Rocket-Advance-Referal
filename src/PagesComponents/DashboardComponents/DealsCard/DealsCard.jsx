@@ -24,22 +24,22 @@ export default function DealsCard(
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-    const navigate = useNavigate();
-    const fetchLeadDetail = async () => {
-      const { data } = await makeRequest(
-        "/referral/lead-form",
-        "get",
-        undefined,
-        "",
-        navigate
-      );
-      if (!Object.keys(data || []).length) return;
-      setSrc(data?.Lead_Shortened_Cuttly);
-    };
-  
-    useEffect(() => {
-      fetchLeadDetail();
-    }, []);
+  const navigate = useNavigate();
+  const fetchLeadDetail = async () => {
+    const { data } = await makeRequest(
+      "/referral/lead-form",
+      "get",
+      undefined,
+      "",
+      navigate
+    );
+    if (!Object.keys(data || []).length) return;
+    setSrc(data?.Lead_Shortened_Cuttly);
+  };
+
+  useEffect(() => {
+    fetchLeadDetail();
+  }, []);
 
 
   async function copyTextToClipboard() {
@@ -85,17 +85,17 @@ export default function DealsCard(
 
       {/* Partner Link Card */}
       <Tooltip trigger="click" title="Link copied to clipboard">
-      <div className="smallCards_container" onClick={copyTextToClipboard}>
-        <div className="smallCards_container_top">
-          <div className="smallCards_container_left">
-            <ShareIcon />
+        <div className="smallCards_container" onClick={copyTextToClipboard}>
+          <div className="smallCards_container_top">
+            <div className="smallCards_container_left">
+              <ShareIcon />
+            </div>
+            <div className="smallCards_container_right">
+              <h3 style={{ color: "#0E1C2C", fontWeight: "bold" }}>
+                Your Partner Link
+              </h3>
+            </div>
           </div>
-          <div className="smallCards_container_right">
-            <h3 style={{ color: "#0E1C2C", fontWeight: "bold" }}>
-              Your Partner Link
-            </h3>
-          </div>
-        </div>
         </div>
       </Tooltip>
     </div>
